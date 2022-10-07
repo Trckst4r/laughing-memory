@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="title.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <p id="question">Do you love me?</p>
+        <div class="btn1">
+          <button class="btn" id="yes">yes</button>
+          <button class="btn" id="no">no</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const nobtn = document.getElementById("no");
+      const yesbtn = document.getElementById("yes");
+      const ques = document.getElementById("question");
+      nobtn.addEventListener("click", () => {
+        let rand = Math.floor(Math.random() * (200 + 100) + 1);
+        let rand2 = Math.floor(Math.random() * (-200 - 100) + 1);
+        nobtn.style.transform = "translate(" + rand + "px," + rand2 + "px)";
+      });
+      yesbtn.addEventListener("click", () => {
+        ques.innerHTML = "I love you too <3";
+        yesbtn.style.display = "none";
+        nobtn.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
